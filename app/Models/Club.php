@@ -5,14 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Book extends Model
+class Club extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'author', 'user_id'];
-
-    public function user()
+    public function followers()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsToMany(User::class)->using(Follower::class);
     }
 }

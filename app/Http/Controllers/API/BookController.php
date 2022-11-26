@@ -9,9 +9,10 @@ use Illuminate\Http\Request;
 class BookController extends Controller
 {
     // all books
-    public function index()
+    public function index(Request $request)
     {
-        $books = Book::all()->toArray();
+        //$books = Book::all()->toArray();
+        $books = $request->user()->books->toArray();
         return array_reverse($books);
     }
 
@@ -20,7 +21,8 @@ class BookController extends Controller
     {
         $book = new Book([
             'name' => $request->name,
-            'author' => $request->author
+            'author' => $request->author,
+            'user_id' => $request->user()->id
         ]);
         $book->save();
 
