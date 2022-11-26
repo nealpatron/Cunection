@@ -37,9 +37,10 @@
  */
 
 
- //import {createApp} from 'vue'
+ import {createApp} from 'vue'
 
- require('./bootstrap')
+ import './bootstrap';
+ //require('./bootstrap')
  import App from './App.vue'
  import axios from 'axios'
  import router from './router'

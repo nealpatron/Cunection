@@ -1,14 +1,15 @@
 import {createWebHistory, createRouter} from "vue-router";
 
-import Home from '../pages/Home';
-import About from '../pages/About';
-import Register from '../pages/Register';
-import Login from '../pages/Login';
-import Dashboard from '../pages/Dashboard';
 
-import Books from '../components/Books';
-import AddBook from '../components/AddBook';
-import EditBook from '../components/EditBook';
+import Home from '../pages/Home.vue';
+import About from '../pages/About.vue';
+import Register from '../pages/Register.vue';
+import Login from '../pages/Login.vue';
+import Dashboard from '../pages/Dashboard.vue';
+
+import Books from '../components/Books.vue';
+import AddBook from '../components/AddBook.vue';
+import EditBook from '../components/EditBook.vue';
 
 export const routes = [
     {
