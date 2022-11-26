@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('books', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->foreignId('user_id');
-            $table->string('name');
-            $table->string('author');
+        Schema::create('followers', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
+            $table->foreignId("user_id")->cascadeOnDelete();
+            $table->foreignId("club_id")->cascadeOnDelete();
+            $table->boolean('notify_me');
         });
     }
 
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('books');
+        Schema::dropIfExists('followers');
     }
 };
