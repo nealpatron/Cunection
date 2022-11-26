@@ -18,3 +18,4 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 app.config.globalProperties.$axios = axios;
 
 app.use(router).use(ElementPlus).mount("#app");
+    
