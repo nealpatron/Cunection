@@ -1,9 +1,14 @@
 <template>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="collapse navbar-collapse">
+    <v-app>
+        <v-app-bar>
+            <v-app-bar-nav-icon @click.stop="rail = !rail" />
+            <v-app-bar-title>Cunection</v-app-bar-title>
+        </v-app-bar>
+
+        <v-navigation-drawer :rail="rail">
+            <v-list>
                 <!-- for logged-in user-->
-                <div class="navbar-nav" v-if="isLoggedIn">
+                <div v-if="isLoggedIn">
                     <router-link to="/dashboard" class="nav-item nav-link"
                         >Dashboard</router-link
                     >
@@ -21,7 +26,93 @@
                     >
                 </div>
                 <!-- for non-logged user-->
-                <div class="navbar-nav" v-else>
+                <div v-else>
+                    <!--
+                    <v-list>
+                         Home
+                        <v-list-item prepend-icon="mdi-home" title="Home" />
+
+                         Events
+                        <template v-slot:activator>
+                            <v-list-item
+                                prepend-icon="mdi-home"
+                                title="All Events"
+                            />
+                        </template>
+                        <v-list-group no-action sub-group value="true">
+                            <v-list-item prepend-icon="mdi-home" title="List" />
+                            <v-list-item
+                                prepend-icon="mdi-home"
+                                title="Calendar"
+                            />
+                        </v-list-group>
+
+                        Clubs
+                        <template>
+                            <v-list-item
+                                prepend-icon="mdi-home"
+                                title="Clubs"
+                            />
+                        </template>
+                        <v-list-group no-action sub-group value="true">
+                            <v-list-item
+                                prepend-icon="mdi-home"
+                                title="Search for a Club"
+                            />
+                            <v-list-item
+                                prepend-icon="mdi-home"
+                                title="Browse Clubs"
+                            />
+                        </v-list-group>
+                    </v-list>
+                -->
+
+                    <v-list>
+                        <!-- Home page -->
+                        <v-list-item
+                            prepend-icon="mdi-home"
+                            title="Home"
+                        ></v-list-item>
+
+                        <!-- Events pages-->
+                        <v-list-group value="Events">
+                            <template v-slot:activator="{ props }">
+                                <v-list-item
+                                    v-bind="props"
+                                    prepend-icon="mdi-account-circle"
+                                    title="Events"
+                                ></v-list-item>
+                            </template>
+                            <v-list-item
+                                prepend-icon="mdi-account-circle"
+                                title="List"
+                            ></v-list-item
+                            ><v-list-item
+                                prepend-icon="mdi-account-circle"
+                                title="Calendar"
+                            ></v-list-item>
+                        </v-list-group>
+
+                        <!-- Club pages-->
+                        <v-list-group value="Clubs">
+                            <template v-slot:activator="{ props }">
+                                <v-list-item
+                                    v-bind="props"
+                                    prepend-icon="mdi-account-circle"
+                                    title="Clubs"
+                                ></v-list-item>
+                            </template>
+                            <v-list-item
+                                prepend-icon="mdi-account-circle"
+                                title="Search"
+                            ></v-list-item
+                            ><v-list-item
+                                prepend-icon="mdi-account-circle"
+                                title="Browse"
+                            ></v-list-item>
+                        </v-list-group>
+                    </v-list>
+
                     <router-link to="/" class="nav-item nav-link"
                         >Home</router-link
                     >
@@ -31,15 +122,18 @@
                     <router-link to="/register" class="nav-item nav-link"
                         >Register
                     </router-link>
-                    <router-link to="/about" class="nav-item nav-link"
-                        >About</router-link
-                    >
                 </div>
-            </div>
-        </nav>
-        <br />
-        <router-view />
-    </div>
+                <template v-slot:append>
+                    <div class="pa-2">
+                        <v-btn block> Logout </v-btn>
+                    </div>
+                </template>
+            </v-list>
+        </v-navigation-drawer>
+        <v-main>
+            <router-view />
+        </v-main>
+    </v-app>
 </template>
 
 <script>
@@ -48,6 +142,7 @@ export default {
     data() {
         return {
             isLoggedIn: false,
+            rail: true,
         };
     },
     created() {

@@ -1,21 +1,22 @@
 import { createApp } from "vue";
 
-import "./bootstrap";
 import App from "./App.vue";
 import axios from "axios";
 import router from "./router";
 
-import ElementPlus from "element-plus";
-import "element-plus/dist/index.css";
-import * as ElementPlusIconsVue from "@element-plus/icons-vue";
+// Vuetify
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+
+const vuetify = createVuetify({
+  components,
+  directives,
+})
 
 const app = createApp(App);
 
-for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
-    app.component(key, component);
-}
-
 app.config.globalProperties.$axios = axios;
 
-app.use(router).use(ElementPlus).mount("#app");
-    
+app.use(router).use(vuetify).mount("#app");

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" value="{{ csrf_token() }}"/>
     <title>Cunection</title>
-    @vite(['resources/sass/app.scss'])
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css" rel="stylesheet">
+    <!-- @vite(['resources/sass/app.scss']) -->
 </head>
 <body>
 
