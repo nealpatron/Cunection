@@ -15,7 +15,7 @@ class ClubController extends Controller
      */
     public function index()
     {
-        return Club::all();
+        return Club::all()->sortBy('name');
     }
 
     /**
