@@ -9,7 +9,7 @@ export default {
     async getRequest() {
       try {
         const response = await fetch(
-          "http://localhost:8000/api/clubs"
+          "http://localhost:8000/books"
         );
 
         if (!response.ok) {
@@ -28,7 +28,7 @@ export default {
           name: "The Awesome Club",
           description: "It's gonna be so great!",
         };
-        const url = "http://localhost:8000/api/clubs";
+        const url = "http://localhost:8000/books";
 
         fetch(url, {
           method: "POST",
@@ -50,6 +50,6 @@ export default {
 
 <template>
   <h3>Waiting on some clubs to join...</h3>
-  <button @click="getEvents">Get them events</button>
-  <button @click="postEvent">Post an event :)</button>
+  <v-btn @click="getEvents">Get them events</v-btn>
+  <v-btn @click="postEvent">Post an event :)</v-btn>
 </template>
