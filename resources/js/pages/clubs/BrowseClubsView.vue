@@ -3,7 +3,7 @@ export default {
     name: "BrowseClubs",
     data() {
         return {
-            items: [],
+            clubs: [],
             isFollowing: false,
         };
     },
@@ -16,7 +16,7 @@ export default {
                 this.$axios
                     .get("/api/clubs")
                     .then((response) => {
-                        this.items = response.data;
+                        this.clubs = response.data;
                     })
                     .catch(function (error) {
                         console.error(error);
@@ -34,10 +34,10 @@ export default {
     <div class="d-flex align-center mx-10 mt-12 flex-column">
         <v-row class="justify-space-between">
             <v-card
-                v-for="item in items"
-                :key="item.id"
-                :title="item.name"
-                :text="item.description"
+                v-for="club in clubs"
+                :key="club.id"
+                :title="club.name"
+                :text="club.description"
                 color="#C8C8C8"
                 theme="light"
                 class="my-2 elevation-3"
