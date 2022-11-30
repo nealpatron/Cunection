@@ -24,28 +24,14 @@
                         >
                         </v-list-item>
 
-                        <!-- Books Page (temporary)-->
-                        <v-list-item
-                            prepend-icon="mdi-home"
-                            title="Books"
-                            to="/books"
-                        >
-                        </v-list-item>
-
-                        <!-- Get Test Page (temporary)-->
-                        <v-list-item
-                            prepend-icon="mdi-home"
-                            title="Get test"
-                            to="/gettest"
-                        >
-                        </v-list-item>
+                        <v-divider />
 
                         <!-- Events pages -->
                         <v-list-group value="Events">
                             <template v-slot:activator="{ props }">
                                 <v-list-item
                                     v-bind="props"
-                                    prepend-icon="mdi-account-circle"
+                                    prepend-icon="mdi-calendar-multiple-check"
                                     title="Events"
                                 ></v-list-item>
                             </template>
@@ -55,17 +41,14 @@
                                 <template v-slot:activator="{ props }">
                                     <v-list-item
                                         v-bind="props"
-                                        prepend-icon="mdi-account-circle"
                                         title="Following"
                                     ></v-list-item>
                                 </template>
                                 <v-list-item
-                                    prepend-icon="mdi-account-circle"
                                     title="List"
                                     to="/events-follow-list"
                                 ></v-list-item
                                 ><v-list-item
-                                    prepend-icon="mdi-account-circle"
                                     title="Calendar"
                                     to="/events-follow-calendar"
                                 ></v-list-item>
@@ -76,43 +59,42 @@
                                 <template v-slot:activator="{ props }">
                                     <v-list-item
                                         v-bind="props"
-                                        prepend-icon="mdi-account-circle"
                                         title="All"
                                     ></v-list-item>
                                 </template>
                                 <v-list-item
-                                    prepend-icon="mdi-account-circle"
                                     title="List"
                                     to="/events-all-list"
                                 ></v-list-item
                                 ><v-list-item
-                                    prepend-icon="mdi-account-circle"
                                     title="Calendar"
                                     to="/events-all-calendar"
                                 ></v-list-item>
                             </v-list-group>
                         </v-list-group>
 
+                        <v-divider />
+
                         <!-- Club pages -->
                         <v-list-group value="Clubs">
                             <template v-slot:activator="{ props }">
                                 <v-list-item
                                     v-bind="props"
-                                    prepend-icon="mdi-account-circle"
+                                    prepend-icon="mdi-account-group"
                                     title="Clubs"
                                 ></v-list-item>
                             </template>
                             <v-list-item
-                                prepend-icon="mdi-account-circle"
                                 title="Search"
                                 to="/clubs-search"
                             ></v-list-item
                             ><v-list-item
-                                prepend-icon="mdi-account-circle"
                                 title="Browse"
                                 to="/clubs-browse"
                             ></v-list-item>
                         </v-list-group>
+
+                        <v-divider />
 
                         <!-- Logout Page -->
                         <v-list-item
@@ -146,6 +128,8 @@
                             ></v-list-item>
                         </v-list-group>
 
+                        <v-divider />
+
                         <!-- Club pages -->
                         <v-list-group value="Clubs">
                             <template v-slot:activator="{ props }">
@@ -164,6 +148,8 @@
                                 to="/clubs-browse"
                             ></v-list-item>
                         </v-list-group>
+
+                        <v-divider />
 
                         <!-- Login Page -->
                         <v-list-item
