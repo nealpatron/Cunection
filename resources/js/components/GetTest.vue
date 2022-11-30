@@ -9,7 +9,7 @@ export default {
         getData() {
             this.$axios.get("/sanctum/csrf-cookie").then((response) => {
                 this.$axios
-                    .get("/api/books") // change endpoint here 
+                    .get("/api/clubs") // change endpoint here 
                     .then((response) => {
                         this.info = response.data;
                     })
