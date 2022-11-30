@@ -7,7 +7,7 @@ export default {
         };
     },
     mounted() {
-        this.getAllClubs();
+        this.getFollowedClubs();
     },
     methods: {
         getFollowedClubs() {
