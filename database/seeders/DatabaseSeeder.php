@@ -23,8 +23,14 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
+        $me = User::factory()->create(['name' => 'Neal Patron', 'email' => 'neal.patron@cune.org', 'password' => bcrypt('testpassword')]);
+
         $club1 = Club::factory()->create();
+        $club2 = Club::factory()->create();
         $users1 = User::factory(5)->create();
+
+        $me->clubs()->attach($club1, ['notify' => true]);
+        $me->clubs()->attach($club2, ['notify' => false]);
 
         foreach($users1 as $user)
         {
