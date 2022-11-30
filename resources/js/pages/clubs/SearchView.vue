@@ -11,7 +11,6 @@ export default {
 
 <template>
   <div class="container">
-    <h1>Search</h1>
     <SearchBar />
   </div>
 </template>
