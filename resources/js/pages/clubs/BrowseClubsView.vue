@@ -36,5 +36,3 @@ export default {
         ></v-list-item>
     </v-list>
 </template>
-
-<style scoped></style>
