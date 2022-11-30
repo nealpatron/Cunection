@@ -11,6 +11,13 @@ class Club extends Model
 
     public function followers()
     {
-        return $this->belongsToMany(User::class)->using(Follower::class);
+        return $this->belongsToMany(User::class);
     }
+
+    public function subscribers()
+    {
+        return $this->followers()->wherePivot('notify', true);
+    }
+
+
 }

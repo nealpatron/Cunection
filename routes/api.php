@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\API\BookController;
+use App\Http\Controllers\API\ClubController;
 use App\Http\Controllers\API\UserController;
 
 /*
@@ -31,4 +32,10 @@ Route::group(['prefix' => 'books', 'middleware' => 'auth:sanctum'], function () 
     Route::get('edit/{id}', [BookController::class, 'edit']);
     Route::post('update/{id}', [BookController::class, 'update']);
     Route::delete('delete/{id}', [BookController::class, 'delete']);
+});
+
+Route::get('/', [ClubController::class, 'index']);
+
+Route::group(['prefix' => 'clubs', 'middleware' => 'auth:sanctum'], function () {
+    //
 });

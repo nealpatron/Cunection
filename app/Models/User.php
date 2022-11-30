@@ -3,6 +3,8 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use App\Models\Follower;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -49,8 +51,8 @@ class User extends Authenticatable
 
     public function clubs()
     {
-        return $this->belongsToMany(Club::class)->using(Follower::class);
+        //return $this->belongsToMany(Follower::class)->club;
+        return $this->belongsToMany(Club::class);
     }
-
     
 }
