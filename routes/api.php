@@ -34,7 +34,7 @@ Route::group(['prefix' => 'books', 'middleware' => 'auth:sanctum'], function () 
     Route::delete('delete/{id}', [BookController::class, 'delete']);
 });
 
-Route::get('/', [ClubController::class, 'index']);
+Route::get('/clubs', [ClubController::class, 'index']);
 
 Route::group(['prefix' => 'clubs', 'middleware' => 'auth:sanctum'], function () {
     //

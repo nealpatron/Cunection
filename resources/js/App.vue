@@ -84,13 +84,20 @@
                                     title="Clubs"
                                 ></v-list-item>
                             </template>
+
+                            <v-list-item
+                                title="Following"
+                                to="/clubs-follow"
+                            ></v-list-item>
+
+                            <v-list-item
+                                title="Browse"
+                                to="/clubs-browse"
+                            ></v-list-item>
+
                             <v-list-item
                                 title="Search"
                                 to="/clubs-search"
-                            ></v-list-item
-                            ><v-list-item
-                                title="Browse"
-                                to="/clubs-browse"
                             ></v-list-item>
                         </v-list-group>
 
@@ -140,12 +147,13 @@
                                 ></v-list-item>
                             </template>
                             <v-list-item
-                                title="Search"
-                                to="/clubs-search"
-                            ></v-list-item
-                            ><v-list-item
                                 title="Browse"
                                 to="/clubs-browse"
+                            ></v-list-item>
+
+                            <v-list-item
+                                title="Search"
+                                to="/clubs-search"
                             ></v-list-item>
                         </v-list-group>
 
