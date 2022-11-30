@@ -1,6 +1,6 @@
 <template>
     <v-app>
-        <v-app-bar color="blue">
+        <v-app-bar color="#192C53" theme="dark">
             <v-app-bar-nav-icon @click.stop="rail = !rail" />
             <v-app-bar-title>Cunection</v-app-bar-title>
         </v-app-bar>
