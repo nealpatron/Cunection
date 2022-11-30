@@ -9,6 +9,16 @@ use App\Models\Follower;
 class FollowerController extends Controller
 {
     /**
+     * Return clubs that user follows
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function following(Request $request)
+    {
+        return $request->user()->clubs;
+    }
+    
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response

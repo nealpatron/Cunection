@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\API\BookController;
 use App\Http\Controllers\API\ClubController;
+use App\Http\Controllers\API\FollowerController;
 use App\Http\Controllers\API\UserController;
 
 /*
@@ -34,8 +35,6 @@ Route::group(['prefix' => 'books', 'middleware' => 'auth:sanctum'], function () 
     Route::delete('delete/{id}', [BookController::class, 'delete']);
 });
 
-Route::get('/', [ClubController::class, 'index']);
+Route::get('/clubs', [ClubController::class, 'index']);
 
-Route::group(['prefix' => 'clubs', 'middleware' => 'auth:sanctum'], function () {
-    //
-});
+Route::middleware(['auth:sanctum'])->get('/users/me/following', [FollowerController::class, 'following']);
