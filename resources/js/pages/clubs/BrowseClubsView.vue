@@ -7,16 +7,21 @@ export default {
         };
     },
     mounted() {
-        this.$axios.get("/sanctum/csrf-cookie").then((response) => {
-            this.$axios
-                .get("/api/clubs")
-                .then((response) => {
-                    this.items = response.data;
-                })
-                .catch(function (error) {
-                    console.error(error);
-                });
-        });
+        this.getAllClubs();
+    },
+    methods: {
+        getAllClubs() {
+            this.$axios.get("/sanctum/csrf-cookie").then((response) => {
+                this.$axios
+                    .get("/api/clubs")
+                    .then((response) => {
+                        this.items = response.data;
+                    })
+                    .catch(function (error) {
+                        console.error(error);
+                    });
+            });
+        },
     },
 };
 </script>
