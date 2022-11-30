@@ -2,8 +2,12 @@ import { createWebHistory, createRouter } from "vue-router";
 
 export const routes = [
     {
-        name: "home",
         path: "/",
+        redirect: "/events-all-list",
+    },
+    {
+        name: "home",
+        path: "/home",
         component: () => import("../pages/Home.vue"),
     },
     {
@@ -42,43 +46,41 @@ export const routes = [
         path: "/gettest",
         component: () => import("../components/Gettest.vue"),
     },
-    /*
     {
         path: "/events-follow-list",
         name: "events-follow-list",
-        component: () => import("../views/events/FollowListView.vue"),
-      },
-      {
+        component: () => import("../pages/events/FollowListView.vue"),
+    },
+    {
         path: "/events-follow-calendar",
         name: "events-follow-calendar",
-        component: () => import("../views/events/FollowCalendarView.vue"),
-      },
-      {
+        component: () => import("../pages/events/FollowCalendarView.vue"),
+    },
+    {
         path: "/events-all-list",
         name: "events-all-list",
-        component: () => import("../views/events/AllListView.vue"),
-      },
-      {
+        component: () => import("../pages/events/AllListView.vue"),
+    },
+    {
         path: "/events-all-calendar",
         name: "events-all-calendar",
-        component: () => import("../views/events/AllCalendarView.vue"),
-      },
-      {
+        component: () => import("../pages/events/AllCalendarView.vue"),
+    },
+    {
         path: "/clubs-search",
         name: "search",
-        component: () => import("../views/clubs/SearchView.vue"),
-      },
-      {
+        component: () => import("../pages/clubs/SearchView.vue"),
+    },
+    {
         path: "/clubs-follow",
         name: "clubs-follow",
-        component: () => import("../views/clubs/FollowedClubsView.vue"),
-      },
-      {
+        component: () => import("../pages/clubs/FollowedClubsView.vue"),
+    },
+    {
         path: "/clubs-browse",
         name: "clubs-browse",
-        component: () => import("../views/clubs/BrowseClubsView.vue"),
-      },
-      */
+        component: () => import("../pages/clubs/BrowseClubsView.vue"),
+    },
 ];
 
 const router = createRouter({

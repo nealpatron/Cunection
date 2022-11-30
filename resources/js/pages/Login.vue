@@ -63,7 +63,7 @@ export default {
                         .then(response => {
                             console.log(response.data)
                             if (response.data.success) {
-                                this.$router.go('/dashboard')
+                                this.$router.go('/home')
                             } else {
                                 this.error = response.data.message
                             }
