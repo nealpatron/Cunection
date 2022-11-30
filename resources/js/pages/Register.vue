@@ -24,6 +24,7 @@
                     label="Password"
                     placeholder="Password"
                     required
+                    type="password"
                 ></v-text-field>
 
                 <br />

@@ -12,6 +12,7 @@
 
                 <v-text-field
                     v-model="password"
+                    type="password"
                     clearable
                     label="Password"
                     placeholder="Enter your password"
