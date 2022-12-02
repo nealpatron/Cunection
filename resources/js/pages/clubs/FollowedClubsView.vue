@@ -29,7 +29,7 @@ export default {
 
 <template>
     <h1 class="mx-12 mt-5">Clubs You're Following</h1>
-    <div class="d-flex align-center mx-10 mt-12 flex-column">
+    <div class="d-flex align-center mt-12 flex-column">
         <v-row>
             <v-card
                 v-for="club in clubs"
@@ -38,8 +38,8 @@ export default {
                 :text="club.description"
                 color="#C8C8C8"
                 theme="light"
-                class="my-2 mx-10 elevation-3"
-                width="500"
+                class="my-2 mx-12 elevation-3"
+                width="400"
             >
                 <v-card-actions>
                     <div v-if="isFollowing">

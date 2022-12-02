@@ -41,7 +41,7 @@ export default {
                 color="#C8C8C8"
                 theme="light"
                 class="my-2 mx-10 elevation-3"
-                width="500"
+                width="400"
             >
                 <v-card-actions>
                     <div v-if="isFollowing">
