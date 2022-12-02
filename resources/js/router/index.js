@@ -21,32 +21,6 @@ export const routes = [
         component: () => import("../pages/Login.vue"),
     },
     {
-        name: "dashboard",
-        path: "/dashboard",
-        component: () => import("../pages/Dashboard.vue"),
-    },
-    {
-        name: "books",
-        path: "/books",
-        component: () => import("../components/Books.vue"),
-    },
-    {
-        name: "addbook",
-        path: "/books/add",
-        component: () => import("../components/AddBook.vue"),
-    },
-    {
-        name: "editbook",
-        path: "/books/edit/:id",
-        component: () => import("../components/EditBook.vue"),
-    },
-    {
-        name: "gettest",
-
-        path: "/gettest",
-        component: () => import("../components/Gettest.vue"),
-    },
-    {
         path: "/events-follow-list",
         name: "events-follow-list",
         component: () => import("../pages/events/FollowListView.vue"),
