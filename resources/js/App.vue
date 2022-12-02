@@ -177,6 +177,14 @@
         </v-navigation-drawer>
         <v-main>
             <router-view />
+            <div class="mt-5">
+                <v-footer class="justify-center" inset app>
+                    <p class="x-small">
+                        Created by Faith Brown and Neal Patron -
+                        {{ new Date().getFullYear() }}
+                    </p>
+                </v-footer>
+            </div>
         </v-main>
     </v-app>
 </template>
