@@ -28,10 +28,8 @@ export default {
 </script>
 
 <template>
-    <p class="text-h3 ml-7 mt-5 text-decoration-underline">
-        Clubs You're Following
-    </p>
-    <div class="d-flex align-center mt-12 flex-column">
+    <h1 class="mx-12 mt-5">Clubs You're Following</h1>
+    <div class="d-flex align-center mx-10 mt-12 flex-column">
         <v-row>
             <v-card
                 v-for="club in clubs"
@@ -45,12 +43,20 @@ export default {
             >
                 <v-card-actions>
                     <div v-if="isFollowing">
-                        <v-btn color="#646464" theme="dark" variant="flat" size="small"
+                        <v-btn
+                            color="#646464"
+                            theme="dark"
+                            variant="flat"
+                            size="small"
                             >Unfollow</v-btn
                         >
                     </div>
                     <div v-else>
-                        <v-btn color="#5A9DBF" theme="dark" variant="flat" size="small"
+                        <v-btn
+                            color="#5A9DBF"
+                            theme="dark"
+                            variant="flat"
+                            size="small"
                             >Follow</v-btn
                         >
                     </div>

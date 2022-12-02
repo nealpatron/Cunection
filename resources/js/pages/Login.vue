@@ -1,4 +1,5 @@
 <template>
+    <h1 class="d-flex justify-center mt-5">Login</h1>
     <div style="margin-top: 100px">
         <v-card class="mx-auto px-5 py-10" max-width="344">
             <v-form @submit.prevent="handleSubmit">

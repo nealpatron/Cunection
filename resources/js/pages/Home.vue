@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-    <p class="text-h3 ml-7 mt-5">
+    <h1 class="mx-12 mt-5">
         Homepage
-    </p>
+    </h1>
 </template>

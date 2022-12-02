@@ -28,11 +28,11 @@ export default {
 </script>
 
 <template>
-    <p class="text-h3 ml-7 mt-5 text-decoration-underline">
+    <h1 class="mx-12 mt-5">
         Looking for a Club?
-    </p>
-    <!-- Doesn't work -->
+    </h1>
+    <!-- :items doesn't work -->
     <v-col cols="5">
-        <v-combobox class="mt-10" clearable label="Search..." :items="clubs" />
+        <v-combobox class="mt-10 mx-9" clearable label="Search..." :items="clubs" />
     </v-col>
 </template>
