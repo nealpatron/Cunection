@@ -1,9 +1,9 @@
 <script>
 export default {
-  name: "AllList",
+    name: "AllList",
 };
 </script>
 
 <template>
-  <h3>Waiting on some clubs to join...</h3>
+    <h3>Waiting on some clubs to join...</h3>
 </template>
