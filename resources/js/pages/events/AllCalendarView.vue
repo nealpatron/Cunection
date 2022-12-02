@@ -2,13 +2,13 @@
 import Calendar from "../../components/Calendar.vue";
 
 export default {
-  name: "AllCalendar",
-  components: {
-    Calendar,
-  },
+    name: "AllCalendar",
+    components: {
+        Calendar,
+    },
 };
 </script>
 
 <template>
-  <Calendar />
+    <Calendar />
 </template>
