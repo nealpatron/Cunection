@@ -5,5 +5,5 @@ export default {
 </script>
 
 <template>
-    <h3>Waiting on some clubs to join...</h3>
+    <h1 class="mx-12 mt-5">Waiting on some clubs to join...</h1>
 </template>
