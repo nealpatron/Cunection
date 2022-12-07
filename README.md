@@ -13,6 +13,14 @@ We hope to pass this project on to the Programming Team at CUNE for further deve
 ### Description
 What dat app do? Da flow be what? Why use what we use?
 
+The API uses the ORM included with Laravel called Eloquent, which allows you to interact with each database table using its corresponding model. Eloquent also allows you to define relationships between models, such as One-to-One and One-to-Many relationships. Many-to-Many relationships require a third table, known as a ‘pivot’ table. Eloquent will automatically handle interactions with this table for you when you define a Many-to-Many relationship. The models we are currently using are User and Club. User and Club have a Many-to-Many relationship because a user can follow many clubs, and a club can have many users that follow it.
+
+We define the API endpoints using three controllers: UserController, ClubController, and FollowerController. The UserController handles user registration and login/logout. The ClubController currently handles retrieving club info. In the future, this is where you could handle things like editing club info. The FollowerController currently handles retrieving the clubs that are followed by a given user. In the future, this is where you could handle retrieving the users that follow a given club. We assign these endpoints to API routes in the routes/api.php file
+
+We are currently using an SQLite database for this project. The users, password_resets, failed_jobs, and personal_access_tokens tables were created as part of the tutorial we followed. The clubs table stores clubs and their info, while the club_user table acts as the pivot table for the Many-to-Many relationship between clubs and users. The club_user table also stores a boolean for each club that a user follows that can be used to determine if the user wishes to receive notifications from that club. 
+
+Each table in the database is created using a migration, which the Laravel documentation describes as “version control for your database.” Migrations allow you to modify and share the schema of your database. If you wanted to modify a database table on a shared project, you simply need to modify the table’s migration and then anyone working on the project can run the migration locally and will be able to use the modified schema. 
+
 ### Installing, Compiling, and Running the Project
 This project was developed using npm and Laravel. 
 
