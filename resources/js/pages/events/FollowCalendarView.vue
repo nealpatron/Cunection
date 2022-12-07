@@ -1,12 +1,12 @@
 <script>
-import Calendar from '../../components/Calendar.vue';
+import Calendar from "../../components/Calendar.vue";
 
 export default {
     name: "FollowCalendar",
     components: {
-        Calendar
-    }
-}
+        Calendar,
+    },
+};
 </script>
 
 <template>

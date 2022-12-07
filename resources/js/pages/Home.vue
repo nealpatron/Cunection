@@ -1,19 +1,9 @@
-<template>
-    <div>
-        Homepage
-    </div>
-</template>
-
 <script>
 export default {
     name: "Home",
-    data() {
-        return {
-            //
-        }
-    },
-    created() {
-    },
-    methods: {}
-}
+};
 </script>
+
+<template>
+    <h1 class="mx-12 mt-5">Homepage</h1>
+</template>

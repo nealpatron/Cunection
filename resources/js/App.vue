@@ -1,17 +1,10 @@
 <template>
-    <v-app>
-        <v-app-bar color="blue">
-            <v-app-bar-nav-icon @click.stop="rail = !rail" />
-            <v-app-bar-title>Cunection</v-app-bar-title>
+    <v-app class="myFont">
+        <v-app-bar color="#192C53" theme="dark">
+            <v-app-bar-title class="ml-7">Cunection</v-app-bar-title>
         </v-app-bar>
 
-        <v-navigation-drawer
-            app
-            v-model="drawer"
-            :rail="rail"
-            permanent
-            expand-on-hover
-        >
+        <v-navigation-drawer app v-model="drawer" :rail="false" permanent>
             <v-list nav>
                 <!-- for logged-in user -->
                 <div v-if="isLoggedIn">
@@ -177,6 +170,14 @@
         </v-navigation-drawer>
         <v-main>
             <router-view />
+            <div class="mt-5">
+                <v-footer class="justify-center" inset app>
+                    <p class="x-small">
+                        Created by Faith Brown and Neal Patron -
+                        {{ new Date().getFullYear() }}
+                    </p>
+                </v-footer>
+            </div>
         </v-main>
     </v-app>
 </template>
@@ -187,7 +188,6 @@ export default {
     data() {
         return {
             isLoggedIn: false,
-            rail: false,
             drawer: true,
         };
     },
@@ -218,3 +218,9 @@ export default {
     },
 };
 </script>
+
+<style>
+.myFont {
+    font-family: Georgia, serif;
+}
+</style>
