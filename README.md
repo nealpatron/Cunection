@@ -11,14 +11,20 @@ Cunection is a website for clubs, specifically on the CUNE Campus in Seward, NE.
 We hope to pass this project on to the Programming Team at CUNE for further development in the future. 
 
 ### Description
-What dat app do? Da flow be what? Why use what we use?
+#### Frontend
 
-The API uses the ORM included with Laravel called Eloquent, which allows you to interact with each database table using its corresponding model. Eloquent also allows you to define relationships between models, such as One-to-One and One-to-Many relationships. Many-to-Many relationships require a third table, known as a ‘pivot’ table. Eloquent will automatically handle interactions with this table for you when you define a Many-to-Many relationship. The models we are currently using are *User* and *Club*. *User* and *Club* have a Many-to-Many relationship because a user can follow many clubs, and a club can have many users that follow it.
 
+#### Backend
+##### API and Models
+The API uses the ORM (object-relational mapping) included with Laravel called Eloquent, which allows you to interact with each database table using its corresponding model. Eloquent also allows you to define relationships between models, such as One-to-One and One-to-Many relationships. Many-to-Many relationships require a third table, known as a ‘pivot’ table. Eloquent will automatically handle interactions with this table for you when you define a Many-to-Many relationship. The models we are currently using are *User* and *Club*. *User* and *Club* have a Many-to-Many relationship because a user can follow many clubs, and a club can have many users that follow it.
+
+##### Controllers
 We define the API endpoints using three controllers: *UserController*, *ClubController*, and *FollowerController*. The *UserController* handles user registration and login/logout. The *ClubController* currently handles retrieving club info. In the future, this is where you could handle things like editing club info. The *FollowerController* currently handles retrieving the clubs that are followed by a given user. In the future, this is where you could handle retrieving the users that follow a given club. We assign these endpoints to API routes in the *routes/api.php* file
 
+##### Database
 We are currently using an SQLite database for this project. The *users*, *password_resets*, *failed_jobs*, and *personal_access_tokens* tables were created as part of the tutorial we followed. The *clubs* table stores clubs and their info, while the *club_user* table acts as the pivot table for the Many-to-Many relationship between clubs and users. The *club_user* table also stores a boolean for each club that a user follows that can be used to determine if the user wishes to receive notifications from that club. 
 
+##### Using Migrations
 Each table in the database is created using a migration, which the [Laravel documentation](https://laravel.com/docs/7.x/migrations#introduction) describes as “version control for your database.” Migrations allow you to modify and share the schema of your database. If you wanted to modify a database table on a shared project, you simply need to modify the table’s migration and then anyone working on the project can run the migration locally and will be able to use the modified schema. 
 
 ### Installing, Compiling, and Running the Project
@@ -31,15 +37,20 @@ To compile and minify for production, use `npm run build`.
 
 (insert stuff about getting the laravel side to work as well)
 
-### Examples of It Running
-(insert screenshots/screen recordings)
+### Examples of the Current Website Pages
+
+![Browsing Clubs Example Image](../Browse_Clubs_Example.png)
+![Calendar Example](../Calendar_Example.png)
+![All Events in a List Example](../Events_All_List_Example.png)
+![Following Clubs Example](../Following_Clubs_Example.png)
+![Login Example](../Login_Example.png)
 
 ---
 
 ## Collaborators/Credit
 Faith Brown and Neal Patron are the heads of this project, as it was their senior project. 
 
-Faith's github: (insert it here if wanted)
-Neal's github: (insert it here if wanted)
+[Faith's github](https://github.com/boileddragon)
+[Neal's github](https://github.com/nealpatron)
 
-The main tutorial we followed to incorporate Laravel Sanctum with Vue 3 for authentication was from [Shouts.dev](https://shouts.dev/articles/laravel-spa-with-vue3-auth-crud-example#step1).
+The main tutorial we followed to incorporate [Laravel Sanctum](https://laravel.com/docs/9.x/sanctum) with [Vue 3](https://vuejs.org/) for authentication was from [Shouts.dev](https://shouts.dev/articles/laravel-spa-with-vue3-auth-crud-example#step1).
