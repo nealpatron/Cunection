@@ -2,21 +2,24 @@
 
 namespace Tests\Browser;
 
+use App\Models\User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 
-class RegisterTest extends DuskTestCase
+class RegisterFailTest extends DuskTestCase
 {
     use DatabaseMigrations;
 
     /**
-     * Test register form.
+     * Test that user cannot register using an email that is already registered.
      *
      * @return void
      */
-    public function testRegister()
+    public function testExample()
     {
+        User::factory()->create(['email' => 'neal.patron@test.com']);
+
         $this->browse(function (Browser $browser) {
             $browser->visit('/register')
                 ->assertSee('Register')
@@ -24,8 +27,8 @@ class RegisterTest extends DuskTestCase
                 ->type('#input-5', "neal.patron@test.com")
                 ->type('#input-7', "password")
                 ->press('#app > div > div > main > div:nth-child(2) > div > form > button')
-                ->waitForLocation('/login')
-                ->assertPathIs('/login');
+                ->assertPathIsNot('/login');
+
         });
     }
 }
