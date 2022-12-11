@@ -34,6 +34,12 @@ return [
     */
 
     'connections' => [
+        'dusk_testing' => [
+            'driver' => 'sqlite',
+            'database' => database_path('dusk_database.sqlite'),
+            'prefix' => '',
+            'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
+          ],
 
         'sqlite' => [
             'driver' => 'sqlite',
