@@ -39,10 +39,19 @@ To compile and minify for production, use `npm run build`.
 
 ### Examples of the Current Website Pages
 
+#### Page to Browse Clubs
 ![Browsing Clubs Example Image](./readme-assets/Browse_Clubs_Example.png)
+
+#### Calendar Page for events
 ![Calendar Example](./readme-assets/Calendar_Example.png)
+
+#### Page to See Events from All Clubs in List Form (not yet done)
 ![All Events in a List Example](./readme-assets/Events_All_List_Example.png)
+
+#### Page to See Only Clubs User is Following 
 ![Following Clubs Example](./readme-assets/Following_Clubs_Example.png)
+
+#### Login/Register Page
 ![Login Example](./readme-assets/Login_Example.png)
 
 ---
