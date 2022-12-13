@@ -39,11 +39,11 @@ To compile and minify for production, use `npm run build`.
 
 ### Examples of the Current Website Pages
 
-![Browsing Clubs Example Image](../Browse_Clubs_Example.png)
-![Calendar Example](../Calendar_Example.png)
-![All Events in a List Example](../Events_All_List_Example.png)
-![Following Clubs Example](../Following_Clubs_Example.png)
-![Login Example](../Login_Example.png)
+![Browsing Clubs Example Image](./readme-assets/Browse_Clubs_Example.png)
+![Calendar Example](./readme-assets/Calendar_Example.png)
+![All Events in a List Example](./readme-assets/Events_All_List_Example.png)
+![Following Clubs Example](./readme-assets/Following_Clubs_Example.png)
+![Login Example](./readme-assets/Login_Example.png)
 
 ---
 
