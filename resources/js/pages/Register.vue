@@ -7,7 +7,7 @@
                     v-model="name"
                     class="mb-2"
                     clearable
-                    label="Name"
+                    label="First and Last Name"
                     required
                 ></v-text-field>
 
