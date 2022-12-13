@@ -19,5 +19,7 @@ class Club extends Model
         return $this->followers()->wherePivot('notify', true);
     }
 
+    // Hide these so API tests can differentiate between clubs with the same timestamps
+    protected $hidden = ['created_at', 'updated_at'];
 
 }
