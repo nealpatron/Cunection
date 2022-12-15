@@ -33,7 +33,10 @@ Integration tests using PEST for each of the controllers can be found in the tes
 ### Installing, Compiling, and Running the Project
 This project was developed using npm and Laravel. 
 
-After downloading the project, running `npm install` should download all of the necessary dependencies. 
+After downloading the project, running `npm install` should download all of the necessary dependencies.
+
+You will need to create a .env file at the root of the project and copy the contents of .env.example into it.
+You will also need to create a .env.dusk.local at the root of the project and copy the contents of .env.dusk.local.example into it in order to run the Laravel Dusk tests later.
 
 To compile and hot-reload for development, use `npm run dev`. 
 To compile and minify for production, use `npm run build`.
