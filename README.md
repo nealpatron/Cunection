@@ -38,6 +38,8 @@ After downloading the project, running `npm install` should download all of the 
 You will need to create a .env file at the root of the project and copy the contents of .env.example into it.
 You will also need to create a .env.dusk.local at the root of the project and copy the contents of .env.dusk.local.example into it in order to run the Laravel Dusk tests later.
 
+Before you run the project for the first time you will need to run the database migrations. Run `php artisan migrate` and then type `yes` when prompted to create a new database file. You can now seed the database by running `php artisan db:seed`.
+
 To compile and hot-reload for development, use `npm run dev`. 
 To compile and minify for production, use `npm run build`.
 
