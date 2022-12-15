@@ -54,12 +54,12 @@ To compile and minify for production, use `npm run build`.
 #### Login/Register Page
 ![Login Example](./readme-assets/Login_Example.png)
 
----
+---0
 
 ## Collaborators/Credit
 Faith Brown and Neal Patron are the heads of this project, as it was their senior project. 
 
-[Faith's github](https://github.com/boileddragon)
-[Neal's github](https://github.com/nealpatron)
+- [Faith's github](https://github.com/boileddragon)
+- [Neal's github](https://github.com/nealpatron)
 
 The main tutorial we followed to incorporate [Laravel Sanctum](https://laravel.com/docs/9.x/sanctum) with [Vue 3](https://vuejs.org/) for authentication was from [Shouts.dev](https://shouts.dev/articles/laravel-spa-with-vue3-auth-crud-example#step1).
