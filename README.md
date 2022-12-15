@@ -48,8 +48,6 @@ To run the Laravel Dusk (browser) tests, you first need to start the project usi
     `php artisan serve --env=dusk.local`
 You can then run the Dusk tests using `php artisan dusk`.
 
-(insert stuff about getting the laravel side to work as well)
-
 ### Examples of the Current Website Pages
 
 #### Page to Browse Clubs
