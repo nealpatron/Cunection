@@ -27,6 +27,9 @@ We are currently using an SQLite database for this project. The *users*, *passwo
 ##### Using Migrations
 Each table in the database is created using a migration, which the [Laravel documentation](https://laravel.com/docs/7.x/migrations#introduction) describes as “version control for your database.” Migrations allow you to modify and share the schema of your database. If you wanted to modify a database table on a shared project, you simply need to modify the table’s migration and then anyone working on the project can run the migration locally and will be able to use the modified schema. 
 
+##### Tests
+Integration tests using PEST for each of the controllers can be found in the tests/Feature/Http/Controllers/API folder. End-to-end browser tests using Laravel Dusk can be found in the tests/Browser/ folder.
+
 ### Installing, Compiling, and Running the Project
 This project was developed using npm and Laravel. 
 
@@ -34,6 +37,13 @@ After downloading the project, running `npm install` should download all of the 
 
 To compile and hot-reload for development, use `npm run dev`. 
 To compile and minify for production, use `npm run build`.
+
+To start the Laravel project, run `php artisan serve`.
+
+To run the PEST tests, run `./vendor/bin/pest`.
+To run the Laravel Dusk (browser) tests, you first need to start the project using
+    `php artisan serve --env=dusk.local`
+You can then run the Dusk tests using `php artisan dusk`.
 
 (insert stuff about getting the laravel side to work as well)
 
